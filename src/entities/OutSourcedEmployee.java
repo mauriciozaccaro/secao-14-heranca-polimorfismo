@@ -5,7 +5,7 @@ public class OutSourcedEmployee extends Employee{ // funcionario terceirizado
 	private Double additionalCharge;
 	
 	public OutSourcedEmployee() {
-		
+		super();
 	}
 
 	public OutSourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
@@ -15,7 +15,7 @@ public class OutSourcedEmployee extends Employee{ // funcionario terceirizado
 	 
 	@Override
 	public double payment() {
-		return  hours * valuePerHour + additionalCharge*1.1;
+		return super.payment() + additionalCharge * 1.1;
 	}
 
 	public Double getAdditionalCharge() {
@@ -26,9 +26,10 @@ public class OutSourcedEmployee extends Employee{ // funcionario terceirizado
 		this.additionalCharge = additionalCharge;
 	}
 	
+	/* Esse toString se fez desnecessário ao longo das alterações
 	public String toString() {
 		return getName() + " - R$ " + payment() + "\n";
 	}
-	
+	*/
 	
 }

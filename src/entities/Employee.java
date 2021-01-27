@@ -3,15 +3,15 @@ package entities;
 public class Employee {
 	
 	private String name;
-	protected Integer hours;
-	protected Double valuePerHour;
+	private Integer hours;
+	private Double valuePerHour;
 	
 	public Employee() {
 		
 	}
 
 	public Employee(String name, Integer hours, Double valuePerHour) {
-		super();
+	
 		this.name = name;
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
@@ -44,10 +44,10 @@ public class Employee {
 	public void setValuePerHour(Double valuePerHour) {
 		this.valuePerHour = valuePerHour;
 	}
-	
+	/* Esse toString se fez desnecessário ao longo das alterações
 	public String toString() {
 		return name + " - R$ " + payment() + "\n";
 	}
-	
+	*/
 	
 }
